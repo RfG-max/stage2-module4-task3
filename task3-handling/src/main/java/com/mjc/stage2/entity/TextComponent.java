@@ -14,7 +14,7 @@ public class TextComponent extends AbstractTextComponent {
         StringBuilder content = new StringBuilder();
         for (AbstractTextComponent child : componentList) {
             content.append(child.operation());
-            //result.append(getComponentType().getDelimiter());
+            content.append(getComponentType().getDelimiter());
         }
         return content.toString();
     }
