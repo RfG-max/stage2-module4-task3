@@ -20,14 +20,14 @@ public class LexemeParser extends AbstractTextParser{
         for (String lexeme : lexemes) {
             if (!lexeme.isEmpty()) {
                 TextComponent wordComponent = new TextComponent(TextComponentType.WORD);
-                Matcher matcher = Pattern.compile(WORD_REGEX).matcher(lexeme);
+               // Matcher matcher = Pattern.compile(WORD_REGEX).matcher(lexeme);
 
-                while (matcher.find()) {
-                    String word = matcher.group();
-                    for (char c : word.toCharArray()) {
+               //while (matcher.find()) {
+               //     String word = matcher.group();
+                    for (char c : lexeme.toCharArray()) {
                         wordComponent.add(new SymbolLeaf(c));
                     }
-                }
+
                 textComponent.add(wordComponent);
             }
         }
